@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende HTML | Web Dev 3º ESO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Specific styles for learning pages */
+        .lesson-nav {
+            position: sticky;
+            top: 80px;
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            display: none;
+            /* Hidden on mobile by default */
+        }
+
+        @media (min-width: 1024px) {
+            .page-layout {
+                display: grid;
+                grid-template-columns: 250px 1fr;
+                gap: 2rem;
+                align-items: start;
+            }
+
+            .lesson-nav {
+                display: block;
+            }
+        }
+
+        .lesson-nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .lesson-nav a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .lesson-nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Result formatting adjustments */
+        .demo-result img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="html_learning.html" class="active">HTML</a></li>
+            <li><a href="css_learning.html">CSS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container page-layout">
+
+        <aside class="lesson-nav">
+            <h3>Índice</h3>
+            <ul>
+                <li><a href="#estructura">Estructura Básica</a></li>
+                <li><a href="#texto">Encabezados y Párrafos</a></li>
+                <li><a href="#semantica">Semántica</a></li>
+                <li><a href="#enlaces">Enlaces</a></li>
+                <li><a href="#imagenes">Imágenes</a></li>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+                <li><a href="#atributos">Atributos, ID y Clases</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <header class="hero" style="padding: 2rem 0; text-align: left; align-items: flex-start;">
+                <div>
+                    <h1>Curso de <span class="gradient-text">HTML</span></h1>
+                    <p>El lenguaje de marcado que estructura la web.</p>
+                </div>
+            </header>
+
+            <section id="estructura">
+                <h2>Estructura Básica</h2>
+                <p>Todo documento HTML comienza con una estructura esqueleto estándar. Aquí es donde definimos el tipo
+                    de documento y las secciones principales: <code>&lt;head&gt;</code> (información técnica) y
+                    <code>&lt;body&gt;</code> (contenido visible).</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Estructura</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi Primera Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este es mi primer párrafo.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <div class="demo-result">
+                        <h1>¡Hola Mundo!</h1>
+                        <p>Este es mi primer párrafo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="texto">
+                <h2>Encabezados y Párrafos</h2>
+                <p>HTML nos ofrece 6 niveles de encabezados, desde <code>&lt;h1&gt;</code> (el más importante) hasta
+                    <code>&lt;h6&gt;</code>. Los párrafos se definen con <code>&lt;p&gt;</code>.</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Texto</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;p&gt;Esto es un párrafo de texto normal.&lt;/p&gt;
+&lt;p&gt;Podemos usar &lt;strong&gt;negrita&lt;/strong&gt; y &lt;em&gt;cursiva&lt;/em&gt;.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <h1>Título Principal</h1>
+                        <h2>Subtítulo</h2>
+                        <p>Esto es un párrafo de texto normal.</p>
+                        <p>Podemos usar <strong>negrita</strong> y <em>cursiva</em>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="semantica">
+                <h2>Semántica</h2>
+                <p>Las etiquetas semánticas dan significado al contenido, ayudando a los navegadores y buscadores a
+                    entender la estructura. Ejemplos: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                    <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>.</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo Semántico</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;header&gt;
+  &lt;nav&gt;Menú de navegación&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Título del Artículo&lt;/h2&gt;
+    &lt;p&gt;Contenido del artículo...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;Pie de página&lt;/footer&gt;</code></pre>
+                    <div class="demo-result">
+                        <header style="background:#eee; padding:5px;">Header</header>
+                        <main style="padding:10px; border:1px solid #ccc; margin:5px 0;">
+                            <article>
+                                <h2>Título del Artículo</h2>
+                                <p>Contenido del artículo...</p>
+                            </article>
+                        </main>
+                        <footer style="background:#eee; padding:5px;">Pie de página</footer>
+                    </div>
+                </div>
+            </section>
+
+            <section id="enlaces">
+                <h2>Enlaces</h2>
+                <p>El atributo principal es <code>href</code>, que indica el destino del enlace. Se usa la etiqueta
+                    <code>&lt;a&gt;</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Enlace</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;a href="https://www.google.com" target="_blank"&gt;Ir a Google&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="index.html"&gt;Volver al Inicio&lt;/a&gt;</code></pre>
+                    <div class="demo-result">
+                        <a href="https://www.google.com" target="_blank"
+                            style="color: blue; text-decoration: underline;">Ir a Google</a>
+                        <br>
+                        <a href="index.html" style="color: blue; text-decoration: underline;">Volver al Inicio</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="imagenes">
+                <h2>Imágenes</h2>
+                <p>Usamos la etiqueta <code>&lt;img&gt;</code>. Requiere el atributo <code>src</code> (fuente) y
+                    <code>alt</code> (texto alternativo).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Imagen</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;img src="https://via.placeholder.com/150" alt="Imagen de ejemplo"&gt;</code></pre>
+                    <div class="demo-result">
+                        <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+                    </div>
+                </div>
+            </section>
+
+            <section id="listas">
+                <h2>Listas</h2>
+                <p>Hay dos tipos principales: Ordenadas (<code>&lt;ol&gt;</code>) y Desordenadas
+                    (<code>&lt;ul&gt;</code>). Cada elemento es un <code>&lt;li&gt;</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Listas</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;h3&gt;Lista Desordenada&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Lista Ordenada&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Primer paso&lt;/li&gt;
+  &lt;li&gt;Segundo paso&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <div class="demo-result">
+                        <h3>Lista Desordenada</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <h3>Lista Ordenada</h3>
+                        <ol>
+                            <li>Primer paso</li>
+                            <li>Segundo paso</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tablas">
+                <h2>Tablas</h2>
+                <p>Las tablas se crean con <code>&lt;table&gt;</code>. Las filas son <code>&lt;tr&gt;</code>, los
+                    encabezados <code>&lt;th&gt;</code> y las celdas de datos <code>&lt;td&gt;</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Tabla</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nombre&lt;/th&gt;
+      &lt;th&gt;Edad&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ana&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Luis&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="demo-result">
+                        <table border="1" style="border-collapse: collapse; width: 100%;">
+                            <thead>
+                                <tr style="background-color: #f2f2f2;">
+                                    <th style="padding: 8px; text-align: left;">Nombre</th>
+                                    <th style="padding: 8px; text-align: left;">Edad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 8px;">Ana</td>
+                                    <td style="padding: 8px;">15</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px;">Luis</td>
+                                    <td style="padding: 8px;">16</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="atributos">
+                <h2>Atributos, ID y Clases</h2>
+                <p>Los atributos modifican las etiquetas. <code>id</code> es un identificador único, y
+                    <code>class</code> sirve para agrupar elementos (muy usado en CSS).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ejemplo de Atributos</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!-- ID único --&gt;
+&lt;p id="intro"&gt;Este párrafo tiene un ID único.&lt;/p&gt;
+
+&lt;!-- Clases compartidas --&gt;
+&lt;p class="destacado"&gt;Texto destacado 1&lt;/p&gt;
+&lt;p class="destacado"&gt;Texto destacado 2&lt;/p&gt;
+
+&lt;!-- Atributo style (CSS en línea) --&gt;
+&lt;p style="color: red;"&gt;Texto en rojo&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p>Este párrafo tiene un ID único.</p>
+                        <p style="font-weight: bold;">Texto destacado 1 (simulado)</p>
+                        <p style="font-weight: bold;">Texto destacado 2 (simulado)</p>
+                        <p style="color: red;">Texto en rojo</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>Aprende Web Dev 3º ESO &copy; 2026</p>
+    </footer>
+
+    <!-- Prism.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

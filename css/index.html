@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso CSS | Web Dev 3º ESO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h1>Curso Completo de CSS</h1>
+            <p>Bienvenido al módulo de CSS. Aquí aprenderás a dar estilo, color y vida a tus páginas web.</p>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h2>¿Qué es CSS?</h2>
+                <p>CSS (Cascading Style Sheets) es el lenguaje de diseño. Si HTML es el esqueleto, CSS es la piel, la
+                    ropa y el maquillaje.</p>
+                <a href="01_intro.html" class="btn btn-primary"
+                    style="margin-top: 1rem; display: inline-block;">Comenzar Lección 1 &rarr;</a>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <div class="css-animation-demo"
+                    style="width: 100px; height: 100px; background: linear-gradient(45deg, #2f81f7, #d2a8ff); margin: 0 auto; border-radius: 50%; animation: pulse 2s infinite;">
+                </div>
+                <style>
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1);
+                            box-shadow: 0 0 0 0 rgba(47, 129, 247, 0.7);
+                        }
+
+                        70% {
+                            transform: scale(1.1);
+                            box-shadow: 0 0 0 20px rgba(47, 129, 247, 0);
+                        }
+
+                        100% {
+                            transform: scale(1);
+                            box-shadow: 0 0 0 0 rgba(47, 129, 247, 0);
+                        }
+                    }
+                </style>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Todo lo visual se hace con CSS</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Aprende Web Dev 3º ESO &copy; 2026</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

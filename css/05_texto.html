@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Estilos de Texto - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html" class="active-lesson">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>5. Estilos de Texto</h1>
+
+            <section>
+                <h2>Tipografía Básica</h2>
+                <p>El texto es lo más importante de la web. CSS nos da control total sobre cómo se ve.</p>
+
+                <h3>Alineación y Decoración</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Formato de Texto</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .centro { text-align: center; }
+  .derecha { text-align: right; }
+  .tachado { text-decoration: line-through; }
+  .subrayado { text-decoration: underline; }
+  .mayus { text-transform: uppercase; }
+&lt;/style&gt;
+
+&lt;p class="centro"&gt;Estoy centrado&lt;/p&gt;
+&lt;p class="derecha"&gt;Estoy a la derecha&lt;/p&gt;
+&lt;p class="tachado"&gt;No me leas&lt;/p&gt;
+&lt;p class="mayus"&gt;Gritando en mayúsculas&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="border: 1px solid #eee; padding: 10px;">
+                            <p style="text-align: center;">Estoy centrado</p>
+                            <p style="text-align: right;">Estoy a la derecha</p>
+                            <p style="text-decoration: line-through;">No me leas</p>
+                            <p style="text-transform: uppercase;">Gritando en mayúsculas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Espaciado y Altura de Línea</h3>
+                <p>Para hacer el texto legible, ajustamos el espacio entre líneas (<code>line-height</code>) y letras
+                    (<code>letter-spacing</code>).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Texto legible</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .texto-denso {
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .texto-aireado {
+    line-height: 1.8;
+    letter-spacing: 2px;
+  }
+&lt;/style&gt;
+
+&lt;p class="texto-denso"&gt;Texto muy pegado difícil de leer.&lt;/p&gt;
+&lt;p class="texto-aireado"&gt;Texto con espacio, más elegante y fácil de leer.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p style="line-height: 1; letter-spacing: -1px; margin-bottom: 20px;">Texto muy pegado difícil
+                            de leer. Lorem ipsum dolor sit amet.</p>
+                        <p style="line-height: 1.8; letter-spacing: 2px;">Texto con espacio, más elegante y fácil de
+                            leer. Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="04_boxmodel.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="06_fuentes.html" class="btn btn-primary">Siguiente: Fuentes &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. Modelo de Caja - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html" class="active-lesson">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>4. El Modelo de Caja (Box Model)</h1>
+
+            <section>
+                <h2>Todo es una caja</h2>
+                <p>En HTML y CSS, cada elemento es una caja rectangular. Entender esto es VITAL. La caja tiene 4 partes:
+                </p>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <ol>
+                        <li><strong>Content (Contenido)</strong>: El texto o imagen real.</li>
+                        <li><strong>Padding (Relleno)</strong>: Espacio entre el contenido y el borde. (Es
+                            transparente).</li>
+                        <li><strong>Border (Borde)</strong>: La línea que rodea el relleno.</li>
+                        <li><strong>Margin (Margen)</strong>: Espacio fuera del borde, para separar la caja de otras
+                            cajas.</li>
+                    </ol>
+                </div>
+
+                <h3>Ejemplo Visual</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Ver las partes</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .caja-ejemplo {
+    width: 200px;         /* Ancho del contenido */
+    padding: 20px;        /* Espacio interno (verde claro) */
+    border: 5px solid black; /* Borde */
+    margin: 30px;         /* Espacio externo (naranja) */
+    background-color: lightblue; /* Color del contenido */
+  }
+&lt;/style&gt;
+
+&lt;div class="caja-ejemplo"&gt;
+  Soy el contenido.
+&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="background-color: #ffebd3; border: 1px dashed orange; display: inline-block;">
+                            <!-- Simulando margen visualmente con un contenedor -->
+                            <div
+                                style="width: 200px; padding: 20px; border: 5px solid black; background-color: lightblue; margin: 30px;">
+                                Soy el contenido.
+                            </div>
+                            <span style="font-size: 12px; color: orange; display: block; text-align: center;">(El área
+                                naranja es el margen)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Padding vs Margin</h3>
+                <p>La diferencia clave: El <strong>Padding</strong> es parte de la caja (tiene el color de fondo). El
+                    <strong>Margin</strong> es espacio vacío fuera de la caja.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Comparación</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .con-padding {
+    background: pink;
+    padding: 20px; /* Crece la caja */
+  }
+  .con-margin {
+    background: pink;
+    margin: 20px; /* Se aleja de los lados */
+  }
+&lt;/style&gt;
+
+&lt;button class="con-padding"&gt;Botón Grande (Padding)&lt;/button&gt;
+&lt;button class="con-margin"&gt;Botón Separado (Margin)&lt;/button&gt;</code></pre>
+                    <div class="demo-result">
+                        <button style="background: pink; padding: 20px; border: 1px solid #333;">Botón Grande
+                            (Padding)</button>
+                        <button style="background: pink; margin: 20px; border: 1px solid #333;">Botón Separado
+                            (Margin)</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="03_bordes.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="05_texto.html" class="btn btn-primary">Siguiente: Texto &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

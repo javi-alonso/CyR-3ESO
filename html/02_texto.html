@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Texto y Encabezados - Curso HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">HTML</a></li>
+            <li><a href="../css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones HTML</h3>
+            <ul>
+                <li><a href="01_estructura.html">1. Estructura Básica</a></li>
+                <li><a href="02_texto.html" class="active-lesson">2. Texto y Encabezados</a></li>
+                <li><a href="03_semantica.html">3. Semántica</a></li>
+                <li><a href="04_enlaces.html">4. Enlaces</a></li>
+                <li><a href="05_imagenes.html">5. Imágenes</a></li>
+                <li><a href="06_listas.html">6. Listas</a></li>
+                <li><a href="07_tablas.html">7. Tablas</a></li>
+                <li><a href="08_atributos.html">8. Atributos y Clases</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>2. Texto y Encabezados</h1>
+
+            <section>
+                <h2>Organizando el contenido</h2>
+                <p>El texto es la base de la web. En HTML, no basta con escribir; debemos indicar si el texto es un
+                    título, un párrafo importante o una nota simple.</p>
+
+                <h3>Los Encabezados (Headings)</h3>
+                <p>Existen 6 niveles de títulos, del más importante (h1) al menos importante (h6). Solo debe haber un h1
+                    por página.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Jerarquía de Títulos</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;h1&gt;Título Principal (H1)&lt;/h1&gt;
+&lt;h2&gt;Subtítulo de sección (H2)&lt;/h2&gt;
+&lt;h3&gt;Sub-sección (H3)&lt;/h3&gt;</code></pre>
+                    <div class="demo-result">
+                        <h1>Título Principal (H1)</h1>
+                        <h2>Subtítulo de sección (H2)</h2>
+                        <h3>Sub-sección (H3)</h3>
+                    </div>
+                </div>
+
+                <h3>Párrafos y Estilos de Texto</h3>
+                <p>El contenido normal va en etiquetas <code>&lt;p&gt;</code>. Para dar énfasis usamos negrita
+                    (<code>&lt;strong&gt;</code>) o cursiva (<code>&lt;em&gt;</code>).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Formateando Texto</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;p&gt;Este es un párrafo normal.&lt;/p&gt;
+
+&lt;p&gt;
+  Podemos resaltar palabras &lt;strong&gt;importantes&lt;/strong&gt; 
+  o poner énfasis en &lt;em&gt;otras&lt;/em&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;También podemos hacer saltos de línea&lt;br&gt;sin cambiar de párrafo.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p>Este es un párrafo normal.</p>
+                        <p>Podemos resaltar palabras <strong>importantes</strong> o poner énfasis en <em>otras</em>.</p>
+                        <p>También podemos hacer saltos de línea<br>sin cambiar de párrafo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-color: rgba(47, 129, 247, 0.1); border-color: var(--accent-color);">
+                    <strong>💡 Importante</strong>
+                    <p>No uses los encabezados (h1-h6) solo para hacer el texto grande. Úsalos para estructurar tu
+                        documento. Para cambiar el tamaño visual, usaremos CSS más adelante.</p>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="01_estructura.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="03_semantica.html" class="btn btn-primary">Siguiente: Semántica &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03. Bordes - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html" class="active-lesson">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>3. Bordes</h1>
+
+            <section>
+                <h2>Definiendo límites</h2>
+                <p>La propiedad <code>border</code> es un atajo para definir grosor, estilo y color en una sola línea.
+                </p>
+
+                <h3>Sintaxis: Grosor Estilo Color</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Bordes Básicos</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .solido { border: 2px solid black; }
+  .punteado { border: 4px dotted blue; }
+  .doble { border: 5px double green; }
+&lt;/style&gt;
+
+&lt;div class="solido"&gt;Borde Sólido&lt;/div&gt;
+&lt;br&gt;
+&lt;div class="punteado"&gt;Borde Punteado&lt;/div&gt;
+&lt;br&gt;
+&lt;div class="doble"&gt;Borde Doble&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="border: 2px solid black; padding: 5px;">Borde Sólido</div>
+                        <br>
+                        <div style="border: 4px dotted blue; padding: 5px;">Borde Punteado</div>
+                        <br>
+                        <div style="border: 5px double green; padding: 5px;">Borde Doble</div>
+                    </div>
+                </div>
+
+                <h3>Bordes Redondeados (Border Radius)</h3>
+                <p>Para modernizar el diseño, suavizamos las esquinas con <code>border-radius</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Esquinas Redondas</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .boton {
+    background-color: #2f81f7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Redondeado suave */
+  }
+  .circulo {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%; /* Círculo perfecto */
+  }
+&lt;/style&gt;
+
+&lt;button class="boton"&gt;Botón Redondo&lt;/button&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class="circulo"&gt;&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <button
+                            style="background-color: #2f81f7; color: white; padding: 10px 20px; border: none; border-radius: 20px; margin-bottom: 20px;">Botón
+                            Redondo</button>
+                        <div style="width: 50px; height: 50px; background-color: red; border-radius: 50%;"></div>
+                    </div>
+                </div>
+
+                <h3>Bordes Específicos</h3>
+                <p>También puedes poner borde solo en un lado: <code>border-bottom</code>, <code>border-top</code>, etc.
+                </p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Solo abajo</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;h2 style="border-bottom: 3px solid orange;"&gt;
+  Título Subrayado
+&lt;/h2&gt;</code></pre>
+                    <div class="demo-result">
+                        <h2 style="border-bottom: 3px solid orange;">Título Subrayado</h2>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="02_background.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="04_boxmodel.html" class="btn btn-primary">Siguiente: Modelo de Caja &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

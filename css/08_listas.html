@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08. Estilo en Listas - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html" class="active-lesson">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>8. Estilo en Listas</h1>
+
+            <section>
+                <h2>Personalizando Viñetas</h2>
+                <p>Las listas no tienen por qué ser aburridos puntos negros.</p>
+
+                <h3>Cambiando el marcador</h3>
+                <p>Usamos <code>list-style-type</code> para cambiar la forma del punto o número.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Tipos de Lista</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .cuadrado { list-style-type: square; }
+  .circulo { list-style-type: circle; }
+  .romanos { list-style-type: upper-roman; }
+  .nada { list-style-type: none; padding: 0; }
+&lt;/style&gt;
+
+&lt;ul class="cuadrado"&gt;&lt;li&gt;Cuadrado&lt;/li&gt;&lt;/ul&gt;
+&lt;ul class="circulo"&gt;&lt;li&gt;Círculo&lt;/li&gt;&lt;/ul&gt;
+&lt;ol class="romanos"&gt;&lt;li&gt;I, II, III...&lt;/li&gt;&lt;/ol&gt;</code></pre>
+                    <div class="demo-result">
+                        <ul style="list-style-type: square;">
+                            <li>Cuadrado</li>
+                        </ul>
+                        <ul style="list-style-type: circle;">
+                            <li>Círculo</li>
+                        </ul>
+                        <ol style="list-style-type: upper-roman;">
+                            <li>I, II, III...</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h3>Listas como Menús</h3>
+                <p>Al quitar los puntos (<code>list-style: none</code>), las listas son perfectas para menús de
+                    navegación.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Menú Horizontal</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .menu {
+    list-style: none; /* Adiós puntos */
+    padding: 0;
+    display: flex;    /* Se ponen en fila */
+    gap: 15px;        /* Espacio entre ellos */
+    background: #333;
+    padding: 10px;
+  }
+  .menu li { color: white; }
+&lt;/style&gt;
+
+&lt;ul class="menu"&gt;
+  &lt;li&gt;Inicio&lt;/li&gt;
+  &lt;li&gt;Productos&lt;/li&gt;
+  &lt;li&gt;Contacto&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <div class="demo-result">
+                        <ul
+                            style="list-style: none; padding: 10px; display: flex; gap: 15px; background: #333; color: white;">
+                            <li>Inicio</li>
+                            <li>Productos</li>
+                            <li>Contacto</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="07_enlaces.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="09_tablas.html" class="btn btn-primary">Siguiente: Tablas &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

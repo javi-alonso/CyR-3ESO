@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. Estilo en Enlaces - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html" class="active-lesson">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>7. Estilo en Enlaces</h1>
+
+            <section>
+                <h2>Personalizando la navegación</h2>
+                <p>Por defecto, los enlaces son azules y subrayados. CSS nos permite transformarlos en botones o textos
+                    elegantes.</p>
+
+                <h3>El estado :hover</h3>
+                <p>Podemos cambiar el estilo cuando el ratón pasa por encima usando <code>:hover</code>.</p>
+
+                <h3>Ejemplo 1: Enlace Texto Moderno</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Enlace sin subrayado</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .enlace-cool {
+    color: #333;
+    text-decoration: none; /* Quita el subrayado */
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s; /* Animación suave */
+  }
+  .enlace-cool:hover {
+    color: #2f81f7;
+    border-bottom: 2px solid #2f81f7;
+  }
+&lt;/style&gt;
+
+&lt;a href="#" class="enlace-cool"&gt;Pasa el ratón por aquí&lt;/a&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            .enlace-cool {
+                                color: #333;
+                                text-decoration: none;
+                                font-weight: bold;
+                                border-bottom: 2px solid transparent;
+                                transition: 0.3s;
+                                display: inline-block;
+                            }
+
+                            .enlace-cool:hover {
+                                color: #2f81f7;
+                                border-bottom: 2px solid #2f81f7;
+                            }
+                        </style>
+                        <a href="#" class="enlace-cool" onclick="return false;">Pasa el ratón por aquí</a>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 2: Creando un Botón</h3>
+                <p>Los botones de esta web son en realidad enlaces <code>&lt;a&gt;</code> estilizados.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Botón CSS</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .boton-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .boton-link:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Se mueve un poco hacia arriba */
+  }
+&lt;/style&gt;
+
+&lt;a href="#" class="boton-link"&gt;¡Soy un botón!&lt;/a&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            .boton-link-demo {
+                                background-color: #4CAF50;
+                                color: white;
+                                padding: 10px 20px;
+                                text-decoration: none;
+                                border-radius: 5px;
+                                display: inline-block;
+                                transition: transform 0.2s;
+                            }
+
+                            .boton-link-demo:hover {
+                                background-color: #45a049;
+                                transform: translateY(-2px);
+                            }
+                        </style>
+                        <a href="#" class="boton-link-demo" onclick="return false;">¡Soy un botón!</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="06_fuentes.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="08_listas.html" class="btn btn-primary">Siguiente: Listas &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

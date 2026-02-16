@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03. Semántica - Curso HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">HTML</a></li>
+            <li><a href="../css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones HTML</h3>
+            <ul>
+                <li><a href="01_estructura.html">1. Estructura Básica</a></li>
+                <li><a href="02_texto.html">2. Texto y Encabezados</a></li>
+                <li><a href="03_semantica.html" class="active-lesson">3. Semántica</a></li>
+                <li><a href="04_enlaces.html">4. Enlaces</a></li>
+                <li><a href="05_imagenes.html">5. Imágenes</a></li>
+                <li><a href="06_listas.html">6. Listas</a></li>
+                <li><a href="07_tablas.html">7. Tablas</a></li>
+                <li><a href="08_atributos.html">8. Atributos y Clases</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>3. Semántica en HTML</h1>
+
+            <section>
+                <h2>¿Qué es la Semántica?</h2>
+                <p>Antiguamente, todo se hacía con <code>&lt;div&gt;</code>. Hoy usamos etiquetas que "significan" algo.
+                    Esto ayuda a Google a entender tu página y a las personas que usan lectores de pantalla.</p>
+
+                <h3>Etiquetas Estructurales Principales</h3>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <ul>
+                        <li><strong>&lt;header&gt;</strong>: Cabecera de la página o sección (logo, menú).</li>
+                        <li><strong>&lt;nav&gt;</strong>: Navegación principal (enlaces del menú).</li>
+                        <li><strong>&lt;main&gt;</strong>: Contenido principal y único de la página.</li>
+                        <li><strong>&lt;footer&gt;</strong>: Pie de página (copyright, contacto).</li>
+                        <li><strong>&lt;article&gt;</strong>: Contenido que tiene sentido por sí mismo (un post de
+                            blog).</li>
+                        <li><strong>&lt;section&gt;</strong>: Agrupación temática de contenido.</li>
+                    </ul>
+                </div>
+
+                <h3>Ejemplo: Layout Típico</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Web Semántica</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;header&gt;
+  &lt;h1&gt;Mi Blog Personal&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#"&gt;Inicio&lt;/a&gt; | &lt;a href="#"&gt;Sobre mí&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Mi viaje a Japón&lt;/h2&gt;
+    &lt;p&gt;Fue una experiencia increíble...&lt;/p&gt;
+  &lt;/article&gt;
+  
+  &lt;article&gt;
+    &lt;h2&gt;Receta de Ramen&lt;/h2&gt;
+    &lt;p&gt;Ingredientes necesarios...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;Copyright 2026&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                    <div class="demo-result">
+                        <header
+                            style="background:#f4f4f4; padding:10px; border-bottom:1px solid #ddd; margin-bottom:10px;">
+                            <h3 style="margin:0;">Mi Blog Personal</h3>
+                            <nav><a href="#" onclick="return false;">Inicio</a> | <a href="#"
+                                    onclick="return false;">Sobre mí</a></nav>
+                        </header>
+                        <main>
+                            <article style="border:1px solid #eee; padding:10px; margin-bottom:10px;">
+                                <h4 style="margin-top:0;">Mi viaje a Japón</h4>
+                                <p>Fue una experiencia increíble...</p>
+                            </article>
+                            <article style="border:1px solid #eee; padding:10px;">
+                                <h4 style="margin-top:0;">Receta de Ramen</h4>
+                                <p>Ingredientes necesarios...</p>
+                            </article>
+                        </main>
+                        <footer style="background:#333; color:white; padding:10px; margin-top:20px; text-align:center;">
+                            <p style="margin:0; font-size:0.8rem;">Copyright 2026</p>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="02_texto.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="04_enlaces.html" class="btn btn-primary">Siguiente: Enlaces &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

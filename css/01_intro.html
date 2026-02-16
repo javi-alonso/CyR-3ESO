@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. Intro CSS - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html" class="active-lesson">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>1. Introducción y Sintaxis</h1>
+
+            <section>
+                <h2>La Magia del Diseño</h2>
+                <p>CSS (Hojas de Estilo en Cascada) sirve para cambiar la apariencia de tu HTML. Sin CSS, la web sería
+                    muy aburrida (solo texto negro sobre fondo blanco).</p>
+
+                <h3>Sintaxis Básica</h3>
+                <p>La regla de oro de CSS es:</p>
+                <div class="code-window" style="width: auto; margin-bottom: 2rem;">
+                    <pre><code class="language-css">selector {
+  propiedad: valor;
+}</code></pre>
+                </div>
+                <ul>
+                    <li><strong>Selector</strong>: ¿A QUIÉN cambio? (Ej: `p`, `h1`, `.miclase`).</li>
+                    <li><strong>Propiedad</strong>: ¿QUÉ cambio? (Ej: `color`, `font-size`).</li>
+                    <li><strong>Valor</strong>: ¿CÓMO lo cambio? (Ej: `red`, `20px`).</li>
+                </ul>
+
+                <h3>Ejemplo 1: Texto azul</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Selectores de Etiqueta</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  p {
+    color: blue;
+    font-size: 20px;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;Soy un párrafo azul.&lt;/p&gt;
+&lt;p&gt;Yo también, porque soy una etiqueta p.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p style="color: blue; font-size: 20px;">Soy un párrafo azul.</p>
+                        <p style="color: blue; font-size: 20px;">Yo también, porque soy una etiqueta p.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 2: Usando Clases</h3>
+                <p>Para no cambiar TODOS los párrafos, usamos clases (que empiezan con punto <code>.</code> en CSS).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Selectores de Clase</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .alerta {
+    color: red;
+    font-weight: bold;
+  }
+&lt;/style&gt;
+
+&lt;p class="alerta"&gt;¡Cuidado!&lt;/p&gt;
+&lt;p&gt;Yo soy normal.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p style="color: red; font-weight: bold;">¡Cuidado!</p>
+                        <p>Yo soy normal.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="index.html" class="btn btn-secondary">&larr; Índice CSS</a>
+                <a href="02_background.html" class="btn btn-primary">Siguiente: Fondos &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

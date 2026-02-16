@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Pseudoclases - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html" class="active-lesson">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>10. Pseudoclases</h1>
+
+            <section>
+                <h2>Estados especiales</h2>
+                <p>Las pseudoclases permiten cambiar el estilo de un elemento bajo ciertas condiciones (ej. cuando pasas
+                    el ratón). Empiezan con dos puntos <code>:</code>.</p>
+
+                <h3>El rey: :hover</h3>
+                <p>Cambia el estilo al pasar el cursor por encima.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Interactividad</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .caja-interactiva {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    transition: 0.5s; /* Animación suave */
+  }
+  .caja-interactiva:hover {
+    background: red;
+    width: 200px; /* Crece al pasar el ratón */
+  }
+&lt;/style&gt;
+
+&lt;div class="caja-interactiva"&gt;&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            .caja-demo {
+                                width: 100px;
+                                height: 100px;
+                                background: blue;
+                                transition: 0.5s;
+                            }
+
+                            .caja-demo:hover {
+                                background: red;
+                                width: 200px;
+                            }
+                        </style>
+                        <div class="caja-demo"></div>
+                    </div>
+                </div>
+
+                <h3>Otras Pseudoclases útiles</h3>
+                <ul>
+                    <li><code>:active</code>: Mientras haces clic (como pulsar un botón físico).</li>
+                    <li><code>:focus</code>: Cuando estás escribiendo en un campo de texto.</li>
+                    <li><code>:first-child</code>: Selecciona solo el primer elemento de un grupo.</li>
+                </ul>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Input Focus</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  input { border: 1px solid #ccc; padding: 5px; }
+  input:focus {
+    background-color: #e0f7fa;
+    border-color: #00bcd4;
+    outline: none; /* Quita el borde azul feo del navegador */
+  }
+&lt;/style&gt;
+
+&lt;input type="text" placeholder="Haz clic aquí..."&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            .input-demo {
+                                border: 1px solid #ccc;
+                                padding: 5px;
+                            }
+
+                            .input-demo:focus {
+                                background-color: #e0f7fa;
+                                border-color: #00bcd4;
+                                outline: none;
+                            }
+                        </style>
+                        <input type="text" class="input-demo" placeholder="Haz clic aquí...">
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="09_tablas.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="11_unidades.html" class="btn btn-primary">Siguiente: Unidades &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

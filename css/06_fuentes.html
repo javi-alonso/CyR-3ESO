@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Fuentes Google - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html" class="active-lesson">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>6. Fuentes Personalizadas (Google Fonts)</h1>
+
+            <section>
+                <h2>Adiós Times New Roman</h2>
+                <p>No estás limitado a las fuentes básicas de tu ordenador (Arial, Times). Puedes usar miles de fuentes
+                    gratuitas de <a href="https://fonts.google.com" target="_blank">Google Fonts</a>.</p>
+
+                <h3>Paso 1: Importar la fuente</h3>
+                <p>En Google Fonts, seleccionas un estilo y copias el enlace <code>&lt;link&gt;</code> en tu
+                    <code>&lt;head&gt;</code>.</p>
+                <div class="code-window">
+                    <pre><code class="language-html">&lt;head&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;</code></pre>
+                </div>
+
+                <h3>Paso 2: Usarla en CSS</h3>
+                <p>Usas la propiedad <code>font-family</code> con el nombre de la fuente.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Fuente 'Pacifico'</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  
+  .fuente-chula {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: #e91e63;
+  }
+&lt;/style&gt;
+
+&lt;p class="fuente-chula"&gt;¡Hola Mundo con estilo!&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+                        </style>
+                        <p style="font-family: 'Pacifico', cursive; font-size: 30px; color: #e91e63;">¡Hola Mundo con
+                            estilo!</p>
+                    </div>
+                </div>
+
+                <h3>Familias Genéricas</h3>
+                <p>Siempre es bueno poner una fuente de respaldo al final.</p>
+                <div class="card">
+                    <ul>
+                        <li><code>sans-serif</code>: Sin remates (moderna, como Arial).</li>
+                        <li><code>serif</code>: Con remates (clásica, como Times).</li>
+                        <li><code>monospace</code>: Ancho fijo (código, como Courier).</li>
+                        <li><code>cursive</code>: Manuscrita.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="05_texto.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="07_enlaces.html" class="btn btn-primary">Siguiente: Enlaces &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

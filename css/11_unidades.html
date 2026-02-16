@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. Unidades - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html" class="active-lesson">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>11. Unidades de Medida</h1>
+
+            <section>
+                <h2>¿Cuánto mide esto?</h2>
+                <p>En CSS no usamos centímetros. Usamos unidades para pantallas.</p>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3>Tipos Principales</h3>
+                    <ul>
+                        <li><strong>px (Píxeles)</strong>: Unidad fija. Un punto en la pantalla. Fácil de entender pero
+                            no escala bien.</li>
+                        <li><strong>% (Porcentaje)</strong>: Relativo al padre. Si el padre mide 200px, 50% son 100px.
+                            Ideal para diseños elásticos.</li>
+                        <li><strong>rem</strong>: Relativo al tamaño de letra raíz (normalmente 16px). 1rem = 16px. Es
+                            la mejor para accesibilidad.</li>
+                        <li><strong>vh / vw</strong>: Porcentaje del tamaño de la ventana (Viewport Height/Width).</li>
+                    </ul>
+                </div>
+
+                <h3>Ejemplo: px vs %</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Relativo vs Absoluto</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;div style="width: 300px; border: 2px solid black; padding: 10px;"&gt;
+  Soy el padre (300px de ancho)
+  
+  &lt;div style="width: 50%; background: orange;"&gt;
+    Soy el 50% (Mido 150px)
+  &lt;/div&gt;
+  
+  &lt;div style="width: 50px; background: blue; color: white;"&gt;
+    Soy 50px fijos
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div
+                            style="width: 100%; max-width: 300px; border: 2px solid black; padding: 10px; margin-bottom: 10px;">
+                            Soy el padre (ancho limitado)
+                            <div style="width: 50%; background: orange; margin: 10px 0; padding: 5px;">50%</div>
+                            <div style="width: 50px; background: blue; color: white; padding: 5px;">50px</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Unidades de Pantalla (Visual)</h3>
+                <p><code>width: 100vw;</code> ocupa TODO el ancho de la pantalla, sin importar márgenes.</p>
+                <p><code>height: 100vh;</code> ocupa TODA la altura visible.</p>
+            </section>
+
+            <div class="pagination">
+                <a href="10_pseudo.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="../index.html" class="btn btn-primary">Volver al Inicio &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

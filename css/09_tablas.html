@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09. Estilo en Tablas - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html" class="active-lesson">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>9. Estilo en Tablas</h1>
+
+            <section>
+                <h2>Tablas Legibles y Bonitas</h2>
+                <p>Las tablas por defecto son feas. Con CSS podemos hacerlas muy profesionales.</p>
+
+                <h3>Bordes Colapsados</h3>
+                <p>IMPORTANTE: Para que los bordes se vean finos y unidos, usamos
+                    <code>border-collapse: collapse;</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Tabla Básica Estilizada</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Une los bordes dobles */
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Espacio para respirar */
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+&lt;/style&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Puntos&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Mario&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Luigi&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="demo-result">
+                        <table style="width:100%; border-collapse:collapse;">
+                            <tr style="background:#f2f2f2;">
+                                <th style="border:1px solid #ddd; padding:8px; text-align:left;">Nombre</th>
+                                <th style="border:1px solid #ddd; padding:8px; text-align:left;">Puntos</th>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #ddd; padding:8px;">Mario</td>
+                                <td style="border:1px solid #ddd; padding:8px;">100</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #ddd; padding:8px;">Luigi</td>
+                                <td style="border:1px solid #ddd; padding:8px;">90</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <h3>Efecto Cebra (Zebra Striping)</h3>
+                <p>Para facilitar la lectura, pintamos las filas pares de otro color usando
+                    <code>:nth-child(even)</code>.</p>
+                <div class="callout"
+                    style="background: var(--card-bg); padding: 1rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-color);">
+                    <pre><code class="language-css">tr:nth-child(even) {
+  background-color: #f9f9f9;
+}</code></pre>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="08_listas.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="10_pseudo.html" class="btn btn-primary">Siguiente: Pseudoclases &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

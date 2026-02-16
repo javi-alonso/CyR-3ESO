@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08. Atributos, ID y Clases - Curso HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">HTML</a></li>
+            <li><a href="../css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones HTML</h3>
+            <ul>
+                <li><a href="01_estructura.html">1. Estructura Básica</a></li>
+                <li><a href="02_texto.html">2. Texto y Encabezados</a></li>
+                <li><a href="03_semantica.html">3. Semántica</a></li>
+                <li><a href="04_enlaces.html">4. Enlaces</a></li>
+                <li><a href="05_imagenes.html">5. Imágenes</a></li>
+                <li><a href="06_listas.html">6. Listas</a></li>
+                <li><a href="07_tablas.html">7. Tablas</a></li>
+                <li><a href="08_atributos.html" class="active-lesson">8. Atributos y Clases</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>8. Atributos, ID y Clases</h1>
+
+            <section>
+                <h2>Dando superpoderes a las etiquetas</h2>
+                <p>Los atributos ofrecen información extra sobre las etiquetas. Algunos son específicos (como
+                    <code>src</code> en imágenes) pero otros son globales (valen para todos).</p>
+
+                <h3>ID vs Class</h3>
+                <p>Estos son los dos atributos más usados para conectar HTML con CSS y JavaScript.</p>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <ul>
+                        <li><strong>id</strong>: Identificador ÚNICO. Solo puede haber uno con ese nombre en toda la
+                            página. Como el DNI.</li>
+                        <li><strong>class</strong>: Identificador múltiple. Varios elementos pueden compartir la misma
+                            clase. Como el uniforme del colegio.</li>
+                    </ul>
+                </div>
+
+                <h3>Ejemplo: ID y Class</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Identificadores y Clases</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!-- Solo hay un encabezado principal --&gt;
+&lt;h1 id="titulo-principal"&gt;Mi Web&lt;/h1&gt;
+
+&lt;!-- Varios párrafos destacados --&gt;
+&lt;p class="destacado"&gt;Noticia urgente 1.&lt;/p&gt;
+&lt;p class="destacado"&gt;Noticia urgente 2.&lt;/p&gt;
+
+&lt;p&gt;Noticia normal.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            /* Simulando CSS para el ejemplo */
+                            #demo-titulo {
+                                color: purple;
+                            }
+
+                            .demo-destacado {
+                                background-color: yellow;
+                                font-weight: bold;
+                            }
+                        </style>
+                        <h1 id="demo-titulo">Mi Web</h1>
+                        <p class="demo-destacado">Noticia urgente 1.</p>
+                        <p class="demo-destacado">Noticia urgente 2.</p>
+                        <p>Noticia normal.</p>
+                    </div>
+                </div>
+
+                <h3>El atributo Style</h3>
+                <p>Permite escribir CSS directamente dentro de la etiqueta. (Nota: Es mejor usar un archivo CSS aparte,
+                    pero es bueno conocerlo).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Estilos en Línea</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;p style="color: red; font-size: 20px;"&gt;
+  Soy rojo y grande
+&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p style="color: red; font-size: 20px;">Soy rojo y grande</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="07_tablas.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="../css/index.html" class="btn btn-primary">Ir al Curso CSS &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

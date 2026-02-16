@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. Tablas - Curso HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">HTML</a></li>
+            <li><a href="../css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones HTML</h3>
+            <ul>
+                <li><a href="01_estructura.html">1. Estructura Básica</a></li>
+                <li><a href="02_texto.html">2. Texto y Encabezados</a></li>
+                <li><a href="03_semantica.html">3. Semántica</a></li>
+                <li><a href="04_enlaces.html">4. Enlaces</a></li>
+                <li><a href="05_imagenes.html">5. Imágenes</a></li>
+                <li><a href="06_listas.html">6. Listas</a></li>
+                <li><a href="07_tablas.html" class="active-lesson">7. Tablas</a></li>
+                <li><a href="08_atributos.html">8. Atributos y Clases</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>7. Tablas</h1>
+
+            <section>
+                <h2>Organizando Datos</h2>
+                <p>Las tablas son perfectas para horarios, listas de precios o cualquier dato estructurado. ¡Ojo! No las
+                    uses para maquetar el diseño de la web (eso era en los 90).</p>
+
+                <h3>Etiquetas Esenciales</h3>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <ul>
+                        <li><strong>&lt;table&gt;</strong>: El contenedor principal.</li>
+                        <li><strong>&lt;tr&gt; (Table Row)</strong>: Define una fila horizontal.</li>
+                        <li><strong>&lt;th&gt; (Table Header)</strong>: Célda de título (negrita y centrada por
+                            defecto).</li>
+                        <li><strong>&lt;td&gt; (Table Data)</strong>: Célda de datos normal.</li>
+                    </ul>
+                </div>
+
+                <h3>Ejemplo Simple</h3>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Tabla Básica</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nombre&lt;/th&gt;
+    &lt;th&gt;Edad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ana&lt;/td&gt;
+    &lt;td&gt;15&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Juan&lt;/td&gt;
+    &lt;td&gt;16&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="demo-result">
+                        <table border="1" style="border-collapse: collapse;">
+                            <tr>
+                                <th style="padding: 5px;">Nombre</th>
+                                <th style="padding: 5px;">Edad</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;">Ana</td>
+                                <td style="padding: 5px;">15</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 5px;">Juan</td>
+                                <td style="padding: 5px;">16</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <h3>Tabla Avanzada (Semántica)</h3>
+                <p>Podemos separar la cabecera (<code>thead</code>), el cuerpo (<code>tbody</code>) y el pie
+                    (<code>tfoot</code>) de la tabla.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Tabla Completa</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Manzanas&lt;/td&gt;
+      &lt;td&gt;1.50€&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Peras&lt;/td&gt;
+      &lt;td&gt;2.00€&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+      &lt;td&gt;3.50€&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="demo-result">
+                        <table border="1" style="border-collapse: collapse; min-width: 200px;">
+                            <thead>
+                                <tr style="background:#eee;">
+                                    <th style="padding:5px;">Producto</th>
+                                    <th style="padding:5px;">Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:5px;">Manzanas</td>
+                                    <td style="padding:5px;">1.50€</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:5px;">Peras</td>
+                                    <td style="padding:5px;">2.00€</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="font-weight:bold;">
+                                    <td style="padding:5px;">Total</td>
+                                    <td style="padding:5px;">3.50€</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="06_listas.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="08_atributos.html" class="btn btn-primary">Siguiente: Atributos &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. Enlaces - Curso HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">HTML</a></li>
+            <li><a href="../css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones HTML</h3>
+            <ul>
+                <li><a href="01_estructura.html">1. Estructura Básica</a></li>
+                <li><a href="02_texto.html">2. Texto y Encabezados</a></li>
+                <li><a href="03_semantica.html">3. Semántica</a></li>
+                <li><a href="04_enlaces.html" class="active-lesson">4. Enlaces</a></li>
+                <li><a href="05_imagenes.html">5. Imágenes</a></li>
+                <li><a href="06_listas.html">6. Listas</a></li>
+                <li><a href="07_tablas.html">7. Tablas</a></li>
+                <li><a href="08_atributos.html">8. Atributos y Clases</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>4. Enlaces (Links)</h1>
+
+            <section>
+                <h2>Conectando la Web</h2>
+                <p>La "H" de HTML significa HyperText (Hipertexto). Esto significa texto con enlaces. La etiqueta mágica
+                    es <code>&lt;a&gt;</code> (de "anchor" o ancla).</p>
+
+                <h3>El atributo href</h3>
+                <p>Es obligatorio. Indica "hacia dónde" va el enlace.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Enlace Básico</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;p&gt;
+  Visita el buscador: 
+  &lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p>Visita el buscador: <a href="https://www.google.com"
+                                style="color:blue; text-decoration:underline;">Ir a Google</a></p>
+                    </div>
+                </div>
+
+                <h3>Abrir en nueva pestaña</h3>
+                <p>Usamos <code>target="_blank"</code> para que el usuario no pierda tu página al hacer clic.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Nueva Pestaña</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;a href="https://www.wikipedia.org" target="_blank"&gt;
+  Abrir Wikipedia en otra pestaña
+&lt;/a&gt;</code></pre>
+                    <div class="demo-result">
+                        <a href="https://www.wikipedia.org" target="_blank"
+                            style="color:blue; text-decoration:underline;">Abrir Wikipedia en otra pestaña</a>
+                    </div>
+                </div>
+
+                <h3>Enlaces Internos y Correo</h3>
+                <p>También puedes enlazar a tus propias páginas o abrir el programa de correo.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Otros Tipos</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!-- Enlace a otra página de tu sitio --&gt;
+&lt;a href="01_estructura.html"&gt;Volver al inicio&lt;/a&gt;
+
+&lt;!-- Enlace de correo --&gt;
+&lt;a href="mailto:profe@instituto.es"&gt;Envíame un correo&lt;/a&gt;</code></pre>
+                    <div class="demo-result">
+                        <a href="01_estructura.html" style="color:blue; text-decoration:underline;">Volver al inicio</a>
+                        <br>
+                        <a href="mailto:profe@instituto.es" style="color:blue; text-decoration:underline;">Envíame un
+                            correo</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="03_semantica.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="05_imagenes.html" class="btn btn-primary">Siguiente: Imágenes &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

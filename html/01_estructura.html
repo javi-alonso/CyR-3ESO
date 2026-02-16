@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. Estructura Básica - Curso HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">HTML</a></li>
+            <li><a href="../css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones HTML</h3>
+            <ul>
+                <li><a href="01_estructura.html" class="active-lesson">1. Estructura Básica</a></li>
+                <li><a href="02_texto.html">2. Texto y Encabezados</a></li>
+                <li><a href="03_semantica.html">3. Semántica</a></li>
+                <li><a href="04_enlaces.html">4. Enlaces</a></li>
+                <li><a href="05_imagenes.html">5. Imágenes</a></li>
+                <li><a href="06_listas.html">6. Listas</a></li>
+                <li><a href="07_tablas.html">7. Tablas</a></li>
+                <li><a href="08_atributos.html">8. Atributos y Clases</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>1. Estructura Básica de HTML</h1>
+
+            <section>
+                <h2>El Esqueleto de una Web</h2>
+                <p>Toda página web necesita una estructura mínima para funcionar. Piensa en ello como los cimientos de
+                    una casa. Sin esto, el navegador no sabe cómo interpretar tu contenido.</p>
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3>Conceptos Clave</h3>
+                    <ul>
+                        <li><strong>&lt;!DOCTYPE html&gt;</strong>: Le dice al navegador que usamos HTML5 moderno.</li>
+                        <li><strong>&lt;html&gt;</strong>: La raíz de todo el documento.</li>
+                        <li><strong>&lt;head&gt;</strong>: Configuración invisible (título, metadatos, estilos).</li>
+                        <li><strong>&lt;body&gt;</strong>: Todo lo que el usuario ve en la pantalla.</li>
+                    </ul>
+                </div>
+
+                <h3>Ejemplo 1: Estructura Mínima</h3>
+                <p>Lo mínimo necesario para que una página sea válida.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Código Base</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Página Mínima&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hola, soy lo mínimo.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <div class="demo-result">
+                        <p>Hola, soy lo mínimo.</p>
+                    </div>
+                </div>
+
+                <h3>Ejemplo 2: Estructura Completa</h3>
+                <p>Una estructura más realista incluye el idioma y la codificación de caracteres para que las tildes y ñ
+                    se vean bien.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Código Completo</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi Primera Web&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Bienvenido!&lt;/h1&gt;
+    &lt;p&gt;Esta página está configurada correctamente.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <div class="demo-result">
+                        <h1>¡Bienvenido!</h1>
+                        <p>Esta página está configurada correctamente.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-color: rgba(47, 129, 247, 0.1); border-color: var(--accent-color);">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p>Si no pones <code>&lt;meta charset="UTF-8"&gt;</code>, es posible que caracteres extraños
+                        aparezcan en lugar de las tildes o emojis.</p>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="index.html" class="btn btn-secondary">&larr; Índice</a>
+                <a href="02_texto.html" class="btn btn-primary">Siguiente: Texto &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

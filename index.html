@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Web Dev | HTML & CSS para 3º ESO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Prism.js CSS for Syntax Highlighting (Tomorrow Night theme) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="html/index.html">HTML</a></li>
+            <li><a href="css/index.html">CSS</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Descubre el poder de la <span class="gradient-text">Web</span></h1>
+            <p>Domina HTML y CSS desde cero. La guía definitiva para 3º de ESO.</p>
+            <div class="cta-buttons">
+                <a href="html/index.html" class="btn btn-primary">Empezar con HTML</a>
+                <a href="css/index.html" class="btn btn-secondary">Empezar con CSS</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <pre><code class="language-html">&lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;style&gt;
+  h1 {
+    color: #64ffda;
+  }
+&lt;/style&gt;</code></pre>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="card">
+            <div class="icon">📄</div>
+            <h2>Estructura HTML</h2>
+            <p>Aprende a construir el esqueleto de cualquier página web con etiquetas semánticas.</p>
+            <a href="html/index.html" class="link-arrow">Ir a HTML &rarr;</a>
+        </div>
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h2>Estilo CSS</h2>
+            <p>Dale vida a tus creaciones. Colores, diseños, animaciones y mucho más.</p>
+            <a href="css/index.html" class="link-arrow">Ir a CSS &rarr;</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Creado para alumnos de 3º ESO. &copy; 2026</p>
+    </footer>
+
+    <!-- Prism.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

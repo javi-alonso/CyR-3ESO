@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende CSS | Web Dev 3º ESO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .lesson-nav {
+            position: sticky;
+            top: 80px;
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .page-layout {
+                display: grid;
+                grid-template-columns: 250px 1fr;
+                gap: 2rem;
+                align-items: start;
+            }
+
+            .lesson-nav {
+                display: block;
+            }
+        }
+
+        .lesson-nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .lesson-nav a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .lesson-nav a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="html_learning.html">HTML</a></li>
+            <li><a href="css_learning.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container page-layout">
+
+        <aside class="lesson-nav">
+            <h3>Índice</h3>
+            <ul>
+                <li><a href="#intro">Introducción y Sintaxis</a></li>
+                <li><a href="#background">Fondos (Background)</a></li>
+                <li><a href="#bordes">Bordes</a></li>
+                <li><a href="#boxmodel">Ancho y Alto</a></li>
+                <li><a href="#texto">Estilos de Texto</a></li>
+                <li><a href="#fuentes">Fuentes (Google Fonts)</a></li>
+                <li><a href="#enlaces">Estilo en Enlaces</a></li>
+                <li><a href="#listas">Estilo en Listas</a></li>
+                <li><a href="#tablas">Estilo en Tablas</a></li>
+                <li><a href="#pseudo">Pseudoclases</a></li>
+                <li><a href="#unidades">Unidades de Medida</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <header class="hero" style="padding: 2rem 0; text-align: left; align-items: flex-start;">
+                <div>
+                    <h1>Curso de <span class="gradient-text">CSS</span></h1>
+                    <p>Cascading Style Sheets: El arte de diseñar la web.</p>
+                </div>
+            </header>
+
+            <section id="intro">
+                <h2>Introducción y Sintaxis</h2>
+                <p>CSS se usa para dar estilo a los documentos HTML. La sintaxis básica consiste en un
+                    <strong>selector</strong> y un bloque de <strong>declaración</strong> (propiedad: valor).</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Sintaxis Básica</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  p {
+    color: blue;
+    font-size: 18px;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;Este texto será azul y grande.&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p style="color: blue; font-size: 18px;">Este texto será azul y grande.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="background">
+                <h2>Fondos (Background)</h2>
+                <p>Podemos cambiar el color de fondo o usar una imagen.</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Color e Imagen de Fondo</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .fondo-color {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  .fondo-imagen {
+    background-image: url('https://via.placeholder.com/300x100');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+  }
+&lt;/style&gt;
+
+&lt;div class="fondo-color"&gt;Fondo gris claro&lt;/div&gt;
+&lt;div class="fondo-imagen"&gt;Texto sobre imagen&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="background-color: #f0f0f0; padding: 10px; margin-bottom: 10px;">Fondo gris claro
+                        </div>
+                        <div
+                            style="background-image: url('https://via.placeholder.com/300x100'); background-repeat: no-repeat; background-size: cover; color: white; padding: 20px; text-shadow: 1px 1px 2px black;">
+                            Texto sobre imagen</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bordes">
+                <h2>Bordes</h2>
+                <p>La propiedad <code>border</code> define el ancho, estilo y color del borde.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Bordes y Redondeado</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .caja-borde {
+    border: 2px solid red;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px;
+  }
+&lt;/style&gt;
+
+&lt;div class="caja-borde"&gt;Tengo un borde rojo y redondeado.&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="border: 2px solid red; border-radius: 10px; padding: 10px;">Tengo un borde rojo y
+                            redondeado.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="boxmodel">
+                <h2>Ancho (Width) y Alto (Height)</h2>
+                <p>Controlamos las dimensiones de los elementos con <code>width</code> y <code>height</code>.</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Dimensiones</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .caja-dimension {
+    width: 50%;
+    height: 50px;
+    background-color: coral;
+  }
+&lt;/style&gt;
+
+&lt;div class="caja-dimension"&gt;Ocupo el 50% del ancho&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div
+                            style="width: 50%; height: 50px; background-color: coral; display: flex; align-items: center; justify-content: center; color: white;">
+                            Ocupo el 50% del ancho</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="texto">
+                <h2>Estilos de Texto</h2>
+                <p>Propiedades como <code>text-align</code>, <code>text-decoration</code>, <code>text-transform</code> y
+                    <code>line-height</code> dan forma al texto.</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Formato de Texto</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .centro { text-align: center; }
+  .tachado { text-decoration: line-through; }
+  .mayus { text-transform: uppercase; }
+&lt;/style&gt;
+
+&lt;p class="centro"&gt;Texto centrado&lt;/p&gt;
+&lt;p class="tachado"&gt;Texto tachado&lt;/p&gt;
+&lt;p class="mayus"&gt;Texto en mayúsculas&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <p style="text-align: center;">Texto centrado</p>
+                        <p style="text-decoration: line-through;">Texto tachado</p>
+                        <p style="text-transform: uppercase;">Texto en mayúsculas</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fuentes">
+                <h2>Fuentes (Google Fonts)</h2>
+                <p>Para usar una fuente de Google Fonts, primero la importamos en el <code>&lt;head&gt;</code> y luego
+                    la usamos en <code>font-family</code>.</p>
+
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Google Fonts</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;!-- En el head --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"&gt;
+
+&lt;style&gt;
+  .fuente-chula {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+  }
+&lt;/style&gt;
+
+&lt;p class="fuente-chula"&gt;¡Hola con estilo!&lt;/p&gt;</code></pre>
+                    <div class="demo-result">
+                        <!-- Importamos dinámicamente solo para este ejemplo visual si el CSS principal no lo tiene -->
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+                        </style>
+                        <p style="font-family: 'Pacifico', cursive; font-size: 24px;">¡Hola con estilo!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="enlaces">
+                <h2>Estilo en Enlaces</h2>
+                <p>Podemos cambiar el color y quitar el subrayado a los enlaces.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Botones con Enlaces</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .boton-link {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .boton-link:hover {
+    background-color: #45a049;
+  }
+&lt;/style&gt;
+
+&lt;a href="#" class="boton-link"&gt;Soy un botón&lt;/a&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            .demo-btn:hover {
+                                background-color: #45a049 !important;
+                            }
+                        </style>
+                        <a href="#" class="demo-btn"
+                            style="text-decoration: none; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block;">Soy
+                            un botón</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="listas">
+                <h2>Estilos de Listas</h2>
+                <p>Podemos cambiar las viñetas con <code>list-style-type</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Listas Personalizadas</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  ul.cuadrados { list-style-type: square; }
+  ul.sin-puntos { list-style-type: none; padding: 0; }
+&lt;/style&gt;
+
+&lt;ul class="cuadrados"&gt;
+  &lt;li&gt;Item Cuadrado 1&lt;/li&gt;
+  &lt;li&gt;Item Cuadrado 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <div class="demo-result">
+                        <ul style="list-style-type: square;">
+                            <li>Item Cuadrado 1</li>
+                            <li>Item Cuadrado 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tablas">
+                <h2>Estilos de Tablas</h2>
+                <p>Las tablas bonitas usan <code>border-collapse</code> y <code>padding</code>.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Tabla Estilizada</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  table.bonita {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table.bonita th, table.bonita td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  table.bonita th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+&lt;/style&gt;
+
+&lt;table class="bonita"&gt;
+  &lt;tr&gt;&lt;th&gt;Producto&lt;/th&gt;&lt;th&gt;Precio&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Manzanas&lt;/td&gt;&lt;td&gt;1.50€&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Naranjas&lt;/td&gt;&lt;td&gt;2.00€&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="demo-result">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr style="background-color: #f2f2f2; color: #333;">
+                                <th style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;">Producto
+                                </th>
+                                <th style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;">Precio</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;">Manzanas
+                                </td>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;">1.50€</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;">Naranjas
+                                </td>
+                                <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: left;">2.00€</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pseudo">
+                <h2>Pseudoclases</h2>
+                <p>Estados especiales de los elementos, como cuando pasamos el ratón por encima (<code>:hover</code>).
+                </p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Efecto Hover</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .hover-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 0.3s;
+  }
+  .hover-box:hover {
+    background-color: red;
+  }
+&lt;/style&gt;
+
+&lt;div class="hover-box"&gt;&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <style>
+                            .hover-box-demo {
+                                width: 100px;
+                                height: 100px;
+                                background-color: blue;
+                                transition: background-color 0.3s;
+                            }
+
+                            .hover-box-demo:hover {
+                                background-color: red;
+                            }
+                        </style>
+                        <div class="hover-box-demo"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="unidades">
+                <h2>Unidades de Medida</h2>
+                <p>Existen unidades absolutas (<code>px</code>) y relativas (<code>%</code>, <code>em</code>,
+                    <code>rem</code>).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Px vs %</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;div style="width: 300px; background: grey;"&gt;
+  &lt;div style="width: 50%; background: orange;"&gt;50% de 300px&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="width: 300px; background: grey; color: white; padding: 5px;">
+                            <div style="width: 50%; background: orange; padding: 5px;">50%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>Aprende Web Dev 3º ESO &copy; 2026</p>
+    </footer>
+
+    <!-- Prism.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

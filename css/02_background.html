@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Fondos - Curso CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">WD3</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/index.html">HTML</a></li>
+            <li><a href="index.html" class="active">CSS</a></li>
+        </ul>
+    </nav>
+    <div class="container page-layout">
+        <aside class="lesson-nav">
+            <h3>Lecciones CSS</h3>
+            <ul>
+                <li><a href="01_intro.html">1. Introducción y Sintaxis</a></li>
+                <li><a href="02_background.html" class="active-lesson">2. Fondos (Background)</a></li>
+                <li><a href="03_bordes.html">3. Bordes</a></li>
+                <li><a href="04_boxmodel.html">4. Modelo de Caja</a></li>
+                <li><a href="05_texto.html">5. Estilos de Texto</a></li>
+                <li><a href="06_fuentes.html">6. Fuentes Google</a></li>
+                <li><a href="07_enlaces.html">7. Estilo en Enlaces</a></li>
+                <li><a href="08_listas.html">8. Estilo en Listas</a></li>
+                <li><a href="09_tablas.html">9. Estilo en Tablas</a></li>
+                <li><a href="10_pseudo.html">10. Pseudoclases</a></li>
+                <li><a href="11_unidades.html">11. Unidades de Medida</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>2. Fondos (Background)</h1>
+
+            <section>
+                <h2>Más allá del blanco</h2>
+                <p>Podemos cambiar el fondo de cualquier elemento, no solo de la página entera.</p>
+
+                <h3>1. Color de Fondo</h3>
+                <p>Usamos <code>background-color</code> con nombres de colores (red, blue) o códigos Hexadecimales
+                    (#ff0000).</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Colores Planos</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .caja-verde {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 20px;
+  }
+&lt;/style&gt;
+
+&lt;div class="caja-verde"&gt;Soy una caja con fondo verde&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div style="background-color: #4CAF50; color: white; padding: 20px;">Soy una caja con fondo
+                            verde</div>
+                    </div>
+                </div>
+
+                <h3>2. Imagen de Fondo</h3>
+                <p>Usamos <code>background-image: url('ruta');</code>. Por defecto la imagen se repite si es pequeña.
+                </p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Imagen de Fondo</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .fondo-img {
+    background-image: url('https://via.placeholder.com/100');
+    height: 150px;
+    border: 1px solid black;
+  }
+&lt;/style&gt;
+
+&lt;div class="fondo-img"&gt;&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div
+                            style="background-image: url('https://via.placeholder.com/100'); height: 150px; border: 1px solid black;">
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3. Ajustando la Imagen</h3>
+                <p>Para evitar que se repita y cubrir todo el espacio.</p>
+                <div class="demo-container">
+                    <div class="demo-header">
+                        <span class="demo-title">Fondo Profesional</span>
+                        <button class="copy-btn">Copiar código</button>
+                    </div>
+                    <pre><code class="language-html">&lt;style&gt;
+  .fondo-pro {
+    background-image: url('https://via.placeholder.com/500x300');
+    background-repeat: no-repeat; /* No repetir */
+    background-size: cover;       /* Cubrir todo el área */
+    background-position: center;  /* Centrar */
+    height: 200px;
+    color: white;
+  }
+&lt;/style&gt;
+
+&lt;div class="fondo-pro"&gt;
+  &lt;h2&gt;Texto sobre imagen perfecta&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="demo-result">
+                        <div
+                            style="background-image: url('https://via.placeholder.com/500x300'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 200px; color: white; padding: 20px;">
+                            <h2 style="margin: 0;">Texto sobre imagen perfecta</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pagination">
+                <a href="01_intro.html" class="btn btn-secondary">&larr; Anterior</a>
+                <a href="03_bordes.html" class="btn btn-primary">Siguiente: Bordes &rarr;</a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
